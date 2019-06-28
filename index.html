@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>MY PORTFOLIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fontawesome-free-5.9.0-web/css/all.css">
+    <link rel="stylesheet" href="./css/pro.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"></head>
+    <body class="wrap">
+    <div class ="header">
+        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="enquero.png" >
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="tt.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+   
+</div><br/>
+        <div class="nav">
+        
+        </div>
+        <div class="container">
+            <div class="left">
+            <div class="detail">   
+        <img src="picture_asma.jpg" alt="asma" align="center" height="250" width="250"></img>
+                <p style="font-family: 'Fira Sans', sans-serif; font-weight: 400; text-align: center; padding-top: 20px; font-size: 20px; letter-spacing: 2px;"><b>Shaik Asma</b></p>
+                <p style="font-family: 'Fira Sans', sans-serif; font-weight: 400; text-align: center; font-size: 10px; letter-spacing: 2px;"><b>Engineer</b></p>
+                <img src="enqani.gif">
+        </div>
+        <div class="data">
+            <i class="fas fa-envelope">shaik.asma@enquero.com</i>
+            <i class="fas fa-mobile-alt">9790619451</i></div><br/>
+            <a href="https://www.instagram.com/shaik__asma/" style="color:black;padding-left: 100px;" target="_blank"> <i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/shaik asma" style="color:black;" target="_blank"><i class="fab fa-facebook-square" style="padding-left: 0%"></i></a>
+            </div>
+            
+            <div class="right">
+                <div class="me"><h3>About Me</h3>
+                    <p>Asma is fresher in Enquero Global as an engineer. Asma has completed MTech software engineering(integrated) from VIT University, Vellore.</p></div>
+<br/>
+                <div class="skillSet">
+                <h3 style="text-align: center">skills</h3><br/>
+
+                <p>C / C++  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half"></i> </p>
+                 <p>SQL  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half"></i> </p>
+                    <p>html/css  <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </p></div>
+                    <div class="education">
+                    <h3 style="text-align:center">Education Details</h3>
+            <table width = 100%;> 
+                <tr tr style="text-align: center; font-family: 'Rubik', sans-serif;">
+                    <td >School / College</td>
+                    <td >year</td>
+                </tr>
+                <tr style="text-align: center; font-family: 'Barlow Semi Condensed', sans-serif;">
+                    <td>VIT, Vellore</td>
+                    <td>2014 - 2019</td>
+                </tr>
+              
+                <tr style="text-align: center; font-family: 'Barlow Semi Condensed', sans-serif;">
+                    <td>Narayana Techno School,Hindupur</td>
+                    <td>2008 - 2012</td>
+                </tr>
+                
+                <tr style="text-align: center; font-family: 'Barlow Semi Condensed', sans-serif;">
+                    <td>Narayana Junior College</td>
+                    <td>2012 - </td>
+                </tr></table></div><br>
+                <div class="projects">
+                    <h3>Projects</h3>
+            <p style="text-align: center; padding-left: 3%; font-family: 'Barlow Semi Condensed', sans-serif;">1. Prediction of GST using ARIMA Model </p>
+            <p style="text-align: center; padding-left: 3%; font-family: 'Barlow Semi Condensed', sans-serif;">2. Online voting system using HTML/CSS</p>
+                    <p style="text-align: center; padding-left: 3%; font-family: 'Barlow Semi Condensed', sans-serif;">3. Inventory Management System</p>
+                </div>
+                <div id = "gitReq">
+                    <button><a onclick="git()">Get Git</a></button>
+                </div>
+            </div>
+             <div class="clear"></div>
+        
+        </div></div>
+        <script>
+      
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+ </body>
+</html>
+       
+                <script>
+                    function git(){
+                        var request = new XMLHttpRequest();
+                        request.open('GET','https://api.github.com/users/shaikasma1234/repos',true);
+                        request.send();
+                        function getData(){
+                            var x = JSON.parse(this.responseText);
+                            
+                            var git=document.getElementById('gitReq')
+                            console.log(git)
+                            for(let i = 0; i < x.length; i++){
+                                git.innerHTML+=`<a href="${x[i]["html_url"]}">${x[i]["name"]}</a> <br>`
+                            }
+                            console.log(git)
+                        }
+                        request.onload=getData;
+                    }
+                </script>
+    </body>
+</html>
